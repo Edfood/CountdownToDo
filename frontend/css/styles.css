@@ -1,0 +1,85 @@
+/* 画面全体に関して */
+body {
+  font-size: 2rem;
+  width: 800;
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template: 
+    "header header header" 150px
+    "left   center right " 1fr
+    / 150px 1fr 200px;
+}
+header {
+  grid-area: header;
+  background-color: blanchedalmond;
+}
+main {
+  grid-area: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
+nav {
+  grid-area: left;
+}
+aside {
+  grid-area: right;
+}
+
+/* taskNameHeader, taskNameRow の表示 */
+.taskNameHeader{
+  font-size: 25px;
+  min-height: 50px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
+.taskNameRow{
+  min-height: 100px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
+
+/* taskBoard の表示 */
+main.taskBoard {
+  background-color: red;
+  overflow: scroll;
+}
+
+/* timeRow, time の表示 */
+.timeRow {
+  min-height: 50px;
+  display: flex;
+}
+.time{
+  min-width: 50px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
+
+/* taskRow の表示 */
+.taskRow{
+  min-height: 100px;
+  width: 100fr;  /* 一番右まで行かないから数値を指定したほうがいいかもしれない */
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
+
+/* remainingTimeHeader, remainingTimeRow の表示 */
+.remainingTimeHeader{
+  font-size: 25px;
+  min-height: 50px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
+.remainingTimeRow{
+  min-height: 100px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
