@@ -21,8 +21,8 @@ func newRouter() *echo.Echo {
 
 	api := e.Group("/api")
 	api.Use(middleware.JWTWithConfig(handler.Config))
-	api.POST("/api/tasks", handler.AddTask)
-	api.GET("/api/tasks", handler.GetTasks)
+	api.POST("/tasks", handler.AddTask)
+	api.GET("/tasks", handler.GetTasks)
 	api.DELETE("/tasks/:id", handler.DeleteTask)
 
 	return e
